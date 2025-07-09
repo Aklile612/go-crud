@@ -13,7 +13,7 @@ func init() {
 func main() {
 	r := gin.Default()
 
-	r.GET("/", controllers.PostCreate)
+	r.POST("/post", controllers.PostCreate)
 
 	r.Run() // Default runs on :8080
 }
