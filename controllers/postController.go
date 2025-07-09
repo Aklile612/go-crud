@@ -10,9 +10,15 @@ func PostCreate(c *gin.Context) {
 
 	//get data from request body
 
+	var body struct{
+		Body string
+		Title string
+	}
+
+	c.Bind(&body)
 	//create a post
 
-	post:=models.Post{Title: "hello", Body: "Post the body"}
+	post:=models.Post{Title: body.Title, Body: body.Body}
 	result:= initalizers.DB.Create(&post)
 
 
