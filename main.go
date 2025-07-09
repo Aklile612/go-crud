@@ -14,6 +14,7 @@ func main() {
 	r := gin.Default()
 
 	r.POST("/post", controllers.PostCreate)
+	r.GET("/getpost", controllers.PostIndex)
 
 	r.Run() // Default runs on :8080
 }
