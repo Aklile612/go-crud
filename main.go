@@ -15,6 +15,7 @@ func main() {
 
 	r.POST("/post", controllers.PostCreate)
 	r.GET("/getpost", controllers.PostIndex)
+	r.GET("/singlepost/:id", controllers.PostShow)
 
 	r.Run() // Default runs on :8080
 }
