@@ -31,3 +31,14 @@ func PostCreate(c *gin.Context) {
 		"Post": post,
 	})
 }
+
+
+func PostIndex(c *gin.Context){
+	var posts []models.Post
+	initalizers.DB.Find(&posts)
+
+
+	c.JSON(200,gin.H{
+		"Posts":posts,
+	})
+}
