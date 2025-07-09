@@ -7,6 +7,7 @@ import (
 
 func init() {
 	initalizers.LoadEnvVariables()
+	initalizers.ConnectionToDB()
 }
 func main() {
 	r := gin.Default()
