@@ -84,3 +84,14 @@ func PostUpdate(c *gin.Context){
 		"post":post,
 	})
 }
+
+func PostDelete(c *gin.Context){
+	//get the id 
+
+
+	// Delete the post
+
+
+	// respond
+	
+}
