@@ -87,11 +87,17 @@ func PostUpdate(c *gin.Context){
 
 func PostDelete(c *gin.Context){
 	//get the id 
-
+	id:= c.Param("id")
 
 	// Delete the post
-
+	initalizers.DB.Delete(&models.Post{},id)
 
 	// respond
-	
+	var posts []models.Post
+	initalizers.DB.Find(&posts)
+
+
+	c.JSON(200,gin.H{
+		"posts":posts,
+	})
 }
